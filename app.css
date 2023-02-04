@@ -1,99 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
-    padding: 0;
-    margin: 0;
+
+
+html {
+    height: 100%;
+    color: #252326;
+    background: #D0F4FD;
+    font-size: 2.4vw;
+    overflow: hidden;
+  }
+  
+  @media all and (min-width: 576px) {
+    html {
+      font-size: 1.5vw;
+    }
+  }
+ 
+  @media all and (min-width: 769px) {
+    html {
+      font-size: 1vw;
+    }
+  }
+
+@font-face {
+	font-family: 'Acrom';
+	src: url('/fonts/acrom-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
 }
-
-body{
-    background:#003e21;
-    display: flex;
-    justify-content: center;
-    font-family:poppins;
-    user-select: none;
-    width:100%;
-    /* align-items: center; */
-    
-
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
 }
-
-
-.title{
-    margin-top:40px;
+body {
     display: flex;
-    flex-direction:row;
     align-items: center;
-    justify-content:center;
-    gap:10px;
-    
-    
-}
-
-.title h1{
-    letter-spacing:2px;
-    text-transform: capitalize;
-    font-size:7vw;
-    color:#dcbb57
-}
-
-.title img{
-    width:7vw;
-    height:7vw;
-    animation: rotate 1s ease-in-out infinite;
-    
-}
-.subtitle h3{
-
-    text-transform: capitalize;
-    font-size:2vw;
-    color:#dcbb57
-}
-.links{
-    margin-top:20px;
-}
-.links ul{
-
-    list-style:none;
-    display: flex;
-    flex-direction:column;
-    
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0 3.47rem;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(270deg, #FDCCFC 0%, #FDF4DA 48%, #CFF9FD 100%);
   
 }
+  @media all and (min-width: 576px) {
+    body {
+      padding: 0 6.94rem;
+    }
+  }
 
-.links ul li{
-    
-   
-    padding:4px 12px;
-    font-size:3vw;
+  main{
+    position: relative;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  .top img{
+    position: absolute;
+    top: 2.91rem;
+    left: 0;
+    width: 3.5rem;
+    animation: rotate 1s ease-in-out infinite;
+  }
+  
+
+.content{
+    font: 700 1.3rem/2.4em "Acrom", sans-serif;
+    color:#252326;
+    width: 100%;
 }
 
+  
+  @media all and (min-width: 576px) {
+    .headline{
+      font: 700 4.2rem/1em "Acrom", sans-serif;
+      font-size: 4.04rem;
+      
+    }
+     .top img{
+        width:4.2rem;
+    }
+    
+  }
 
-.fa{
-    text-transform: capitalize;
-    padding-right:8px;
-} 
-a{
-    margin:8px 0;
-    border-radius:4px;
-    border:3px solid #dcbb57;
-    font-weight: bold;
+  
+  @media all and (min-width: 769px) {
+    .headline{
+    
+      font: 700 4.2rem/1em "Acrom", sans-serif;
+      font-size: 4.3rem;
+    }
+    .top img{
+        width:4.2rem;
+    }
+  }
+
+.description {
+    font: 700 0.97rem/2em "Acrom", sans-serif;
+    text-transform: uppercase;
+    margin: 3.68rem 0 0 0;
+  }
+
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 2.91rem 0;
+  }
+  
+  .email {
+    font: 700 1.38rem/1em "Acrom", sans-serif;
+    color: inherit;
     text-decoration: none;
-    text-transform: capitalize;
-    color: #dcbb57;
-}
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .socials__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .socials__link:not(first-child) {
+    margin-left: 3.47rem;
+  }
 
-a:hover
-{
-    background-color: #dcbb57;
-    color: #003e21;
-    transition: 1.2s ease-in-out;
-}
+  a{
+    color: #252326;
+    text-decoration: none;
+    font-size:1.38em;
+
+  }
+  .fa:hover{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.2);
+  }
+  a:any-link,a:visited{
+    color: #252326;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
 
 @keyframes rotate {
 
-   
+    
+
     15%{
         transform: rotate(10deg);
     }
@@ -107,27 +195,6 @@ a:hover
 
     }
    
+   
     
 }
-
-@media only screen and (max-width:420px) {
-    .title{
-        margin-top:40px;
-    }
-    .title  h1{
-        font-size: 10vw;
-    }
-  
-
-    .subtitle h3{
-        font-size:4vw;
-    }
-
-    .links ul li{
-        font-size:5vw;
-    }
-
-
-
-}
-
