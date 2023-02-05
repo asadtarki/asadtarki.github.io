@@ -74,6 +74,7 @@ body {
   }
 
   .top img{
+    user-select: none;
     position: absolute;
     top: 2.91rem;
     left: 0;
