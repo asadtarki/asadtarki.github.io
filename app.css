@@ -159,12 +159,12 @@ body {
   a{
     color: #252326;
     text-decoration: none;
-    font-size:2em;
+    font-size:1.38em;
 
   }
   .fa:hover{
     transition: 0.5s ease-in-out;
-    transform: scale(1.4);
+    transform: scale(1.2);
   }
   a:any-link,a:visited{
     color: #252326;
