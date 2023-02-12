@@ -171,9 +171,11 @@ body {
     color: #252326;
     text-decoration: none;
   }
-#myname:hover{
-  cursor: pointer;
-}
+
+
+  #myname:hover{
+    cursor: pointer;
+  }
 
 
 
